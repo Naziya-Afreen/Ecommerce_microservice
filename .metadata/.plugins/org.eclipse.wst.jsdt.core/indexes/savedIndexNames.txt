@@ -1,0 +1,12 @@
+INDEX VERSION 1.4+C:\Users\NAZIYA\eclipse-microservice-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1050042363.index
+2317501585.index
+53213426.index
+1118982603.index
+715374721.index
+3576401442.index
+1698827149.index
+1451463251.index
+3157506494.index
+3916334769.index
+674828886.index

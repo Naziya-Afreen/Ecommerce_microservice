@@ -1,0 +1,40 @@
+
+package com.example.product_service.controller;
+
+import com.example.product_service.model.Product;
+import com.example.product_service.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/api/products")
+public class ProductController {
+
+    @Autowired
+    private ProductService productService;
+
+    // Create product
+    @PostMapping
+    public Product createProduct(@RequestBody Product product) {
+        return productService.createProduct(product);
+    }
+
+    // Get product by ID
+    @GetMapping("/{id}")
+    public Optional<Product> getProductById(@PathVariable Long id) {
+        return productService.getProductById(id);
+    }
+    @GetMapping
+    public List<Product> getAllProducts() {
+        return productService.getAllProducts(); 
+    }
+
+    // Delete product by ID
+    @DeleteMapping("/{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        productService.deleteProduct(id);
+    }
+}
